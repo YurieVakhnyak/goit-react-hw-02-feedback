@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-export class Section extends Component {
-  constructor({ title }) {
-    super({ title });
-  }
-  render() {
-    const title = 'Please leave feedback';
-    return <p className="feedbackTitle">{title}</p>;
-  }
-}
+import css from './Section.module.css';
+export const Section = ({ title, children }) => {
+  return (
+    <div className={css.Section}>
+      <p className={css.feedbackTitle}>{title}</p>
+      {children}
+    </div>
+  );
+};
